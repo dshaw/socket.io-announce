@@ -1,0 +1,12 @@
+{
+    "name": "socket.io-announce"
+  , "version": "0.0.1pre"
+  , "description": "Socket.IO Multi-process Announcement Channel"
+  , "keywords": ["socket.io", "store", "redis", "redisstore"]
+  , "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)"
+  , "dependencies": {
+      "socket.io": "~0.8.5"
+    }
+  , "main": "index"
+  , "engines": { "node": ">= 0.4.0" }
+}
