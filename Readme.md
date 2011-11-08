@@ -4,7 +4,7 @@ Lightweight infrastructure broadcast for use with Socket.io RedisStore
 ## Install
 
 ```
-npm installl socket.io-announce
+npm install socket.io-announce
 ```
 
 ## Use anywhere in your stack, independent of other socket.io servers.
