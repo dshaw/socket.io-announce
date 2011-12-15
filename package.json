@@ -1,6 +1,6 @@
 {
     "name": "socket.io-announce"
-  , "version": "0.1.0"
+  , "version": "0.1.1"
   , "description": "Socket.io multi-process announcement channel"
   , "keywords": ["socket.io", "store", "redis", "redisstore"]
   , "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)"
