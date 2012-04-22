@@ -15,8 +15,8 @@
     , "examples": "examples"
     }
   , "dependencies": {
-      "redis": ">= 0.6.7"
-    , "socket.io": ">= 0.8.5"
+      "redis": ">= 0.7.1"
+    , "socket.io": "https://github.com/dshaw/socket.io/tarball/patch/redis71"
     }
   , "devDependencies": {
       "tap": ">= 0.0.10"
