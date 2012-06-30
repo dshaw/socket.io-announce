@@ -20,8 +20,8 @@ var events = require('events')
  * Exports
  */
 
-exports = module.exports = Announce;
-exports.createClient = createClient;
+module.exports = Announce;
+Announce.createClient = Announce;
 
 /**
  * Utils
@@ -40,6 +40,8 @@ var slice = Array.prototype.slice;
  */
 
 function Announce (options) {
+  if (!(this instanceof Announce)) return new Announce(options);
+
   options || (options = {});
 
   // node id to uniquely identify this node
@@ -61,11 +63,11 @@ function Announce (options) {
   }
 
   // initialize a redis client for publishing
-  if (options.redisPub instanceof RedisClient) {
-    this.pub = options.redisPub;
+  if (options.pub instanceof RedisClient) {
+    this.pub = options.pub;
   } else {
-    options.redisPub || (options.redisPub = {});
-    this.pub = redis.createClient(options.redisPub.port, options.redisPub.host, options.redisPub);
+    options.pub || (options.pub = {});
+    this.pub = redis.createClient(options.pub.port, options.pub.host, options.pub.options);
   }
 
   this.setFlags();
@@ -195,14 +197,3 @@ Announce.prototype.publish = function (name) {
   var args = slice.call(arguments, 1);
   this.pub.publish(name, this.pack({ nodeId: this.nodeId, args: args }));
 };
-
-
-/**
- * Create an Announce Client
- *
- * @api public
- */
-
-function createClient (options) {
-  return new Announce(options);
-}

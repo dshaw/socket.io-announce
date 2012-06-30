@@ -1,10 +1,10 @@
 {
     "name": "socket.io-announce"
-  , "version": "0.1.1"
+  , "version": "0.1.2-pre"
   , "description": "Socket.io multi-process announcement channel"
   , "keywords": ["socket.io", "store", "redis", "redisstore"]
   , "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)"
-  , "main": "index"
+  , "main": "./announce.js"
   , "repository": {
       "type": "git"
     , "url": "git://github.com/dshaw/socket.io-announce.git"
@@ -19,10 +19,10 @@
     , "socket.io": "https://github.com/dshaw/socket.io/tarball/patch/redis71"
     }
   , "devDependencies": {
-      "tap": ">= 0.0.10"
+      "tap": ">= 0.2.5"
     }
   , "scripts" : {
-      "test" : "tap test/*.js"
+      "test" : "tap ./test"
     }
   , "engines": { "node": ">= 0.4.0" }
 }
