@@ -1,28 +1,38 @@
 {
-    "name": "socket.io-announce"
-  , "version": "0.1.2-pre"
-  , "description": "Socket.io multi-process announcement channel"
-  , "keywords": ["socket.io", "store", "redis", "redisstore"]
-  , "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)"
-  , "main": "./announce.js"
-  , "repository": {
-      "type": "git"
-    , "url": "git://github.com/dshaw/socket.io-announce.git"
-    }
-  , "directories": {
-      "lib": "lib"
-    , "test": "test"
-    , "examples": "examples"
-    }
-  , "dependencies": {
-      "redis": ">= 0.7.1"
-    , "socket.io": "https://github.com/dshaw/socket.io/tarball/patch/redis71"
-    }
-  , "devDependencies": {
-      "tap": ">= 0.2.5"
-    }
-  , "scripts" : {
-      "test" : "tap ./test"
-    }
-  , "engines": { "node": ">= 0.4.0" }
+  "name": "socket.io-announce",
+  "version": "0.1.2",
+  "description": "Socket.io multi-process announcement channel",
+  "keywords": [
+    "socket.io",
+    "store",
+    "redis",
+    "redisstore"
+  ],
+  "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dshaw/socket.io-announce.git"
+  },
+  "bugs": {
+    "url": "git://github.com/dshaw/socket.io-announce/issues"
+  },
+  "license": "MIT",
+  "main": "./announce.js",
+  "directories": {
+    "test": "test",
+    "examples": "examples"
+  },
+  "dependencies": {
+    "redis": "~0.7.1",
+    "socket.io": "https://github.com/dshaw/socket.io/tarball/patch/redis71"
+  },
+  "devDependencies": {
+    "tap": "~0.2.5"
+  },
+  "scripts": {
+    "test": "node test/announce.test.js"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
 }
