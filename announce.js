@@ -150,8 +150,8 @@ Announce.prototype.__defineGetter__('volatile', function () {
  * @api public
  */
 
-Announce.prototype.to = Announce.prototype.in = function (room) {
-  this.flags.room = room;
+Announce.prototype.in = Announce.prototype.to = function (room) {
+  this.flags.endpoint = this.namespace + (room ? '/' + room : '');
   return this;
 };
 
@@ -173,11 +173,11 @@ Announce.prototype.setFlags = function () {
  */
 
 Announce.prototype.packet = function (packet) {
-  packet.endpoint = this.namespace + (this.flags.room ? '/' + this.flags.room : '');
+  packet.endpoint = this.namespace;
 
-  var volatile = this.flags.volatile
-    , exceptions = []
-    , packet = parser.encodePacket(packet);
+  var packet = parser.encodePacket(packet)
+    , volatile = this.flags.volatile
+    , exceptions = [];
 
   this.publish('dispatch', this.flags.endpoint, packet, volatile, exceptions);
 
