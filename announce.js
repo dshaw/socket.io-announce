@@ -173,7 +173,9 @@ Announce.prototype.setFlags = function () {
  */
 
 Announce.prototype.packet = function (packet) {
-  packet.endpoint = this.namespace + (this.flags.room ? '/' + this.flags.room : '');
+  // in(room) not work, fixed
+  packet.endpoint = this.namespace;
+  this.flags.endpoint = (this.flags.room ? '/' + this.flags.room : '');
 
   var volatile = this.flags.volatile
     , exceptions = []
