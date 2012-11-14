@@ -1,6 +1,6 @@
 {
   "name": "socket.io-announce",
-  "version": "0.1.4-pre",
+  "version": "0.1.4",
   "description": "Socket.io multi-process announcement channel",
   "keywords": [
     "socket.io",

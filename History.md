@@ -1,4 +1,10 @@
 
+0.1.4 / 2012-08-22
+==================
+
+  * Fixes for rooms and namespaces... and namespaced rooms.
+  * Tests for all of these cases.
+
 0.1.3 / 2012-08-21
 ==================
 
