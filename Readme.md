@@ -9,7 +9,7 @@ Lightweight infrastructure broadcast for use with Socket.io RedisStore.
 ## Use anywhere in your stack, independent of other socket.io servers.
 
     var announce = require('socket.io-announce').createClient()
-    announce.emit('status', { msg:'Going down for maintaince in 15 minutes', countdown: 15*60*1000 })
+    announce.emit('status', { msg:'Going down for maintenance in 15 minutes', countdown: 15*60*1000 })
 
 ## Emit to all users.
 
