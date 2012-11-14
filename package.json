@@ -1,6 +1,6 @@
 {
   "name": "socket.io-announce",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Socket.io multi-process announcement channel",
   "keywords": [
     "socket.io",
@@ -23,11 +23,11 @@
     "examples": "examples"
   },
   "dependencies": {
-    "redis": "~0.7.1",
-    "socket.io": "~0.9.7"
+    "redis": "~0.7.3",
+    "socket.io": "~0.9.11"
   },
   "devDependencies": {
-    "socket.io-client": "~0.9.7",
+    "socket.io-client": "~0.9.11",
     "tap": "~0.3.0"
   },
   "scripts": {
